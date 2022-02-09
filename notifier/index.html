@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html style="margin: 0; padding: 0; width: 100%; height: 100%;">
+<body style="margin: 0; padding: 0; width: 100%; height: 100%; background-color: red;">  
+  
+<script>
+  var listen = new WebSocket("wss://election-notifier.leoturnbull.repl.co");
+  listen.onmessage = function (event) {
+    document.querySelector("body").style.backgroundColor = "green";
+  }
+  
+</script>
+</body>
+</html>
