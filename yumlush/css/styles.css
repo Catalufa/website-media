@@ -1,0 +1,536 @@
+:root {
+  --bg-color-light: #FFDBEC;
+  --bg-color: #FFB3D6;
+  --highlight-color: #640086;
+  --brand-color: #D40067;
+  --brand-color-light: #FB9DB5;
+}
+
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-color-light);
+  scroll-behavior: smooth;
+}
+
+
+html {
+  position: absolute;
+}
+
+body {
+  position: relative;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 4.2vw;
+  color: var(--highlight-color);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 3.5em;
+  color: var(--highlight-color);
+  padding: 20px;
+  opacity: 0;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.4em;
+  color: black;
+}
+
+b {
+  color: var(--highlight-color);
+  font-weight: 600;
+}
+
+i {
+  color: var(--brand-color);
+}
+
+button {
+  background: var(--brand-color);
+  color: white;
+  height: 2em;
+  padding: 10px 40px 10px 40px;
+  border: 0;
+  font-weight: 500;
+  font-size: 2em;
+  border-radius: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  transition: 0.2s;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+button:hover {
+  background: var(--highlight-color);
+  transform: scale(1.05);
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background: var(--bg-color);
+  box-shadow: 0 0 20px var(--brand-color-light);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.nav p {
+  text-align: center;
+  padding: 0 25px 0 25px;
+  line-height: 60px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.nav p:hover {
+  border-bottom: 5px solid var(--brand-color);
+}
+
+.nav p:last-child {
+  background: var(--brand-color);
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  right: 0;
+  border: 0;
+}
+
+.menu {
+  display: none;
+}
+
+.icon {
+  margin: 30px;
+  height: 60px;
+  filter: drop-shadow(0 0 10px var(--brand-color-light));
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.cover {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 50%);
+}
+
+.cover .bubbles {
+  padding: 5%;
+  height: 60%;
+}
+
+.cover .logo {
+  animation: 0.6s cubic-bezier(0,.6,.6,1) 0s 1 slideInFromRight;
+  height: 25%;
+  position: absolute;
+  right: 15%;
+  top: 33.5%;
+  transition: 0.2s;
+  transform-origin: center right;
+}
+
+.cover .logo:hover {
+  transform: scale(1.05);
+}
+
+.cover .feature {
+  animation: 0.8s cubic-bezier(0,.6,.6,1) 0s 1 rotateInFromLeft;
+  transform-origin: bottom center;
+  position: absolute;
+  height: 55%;
+  bottom: 34%;
+  left: 10%;
+  transition: 0.5s;
+}
+
+.feature:hover {
+  transform: rotate(5deg);
+}
+
+.front {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: calc(100% - 120px);
+  height: calc(100% - 100px);
+  padding: 50px 60px 50px 60px;
+  pointer-events: none;
+}
+
+.front h1 {
+  animation: 0.4s cubic-bezier(0,.6,.6,1) 0s 1 fadeInFromLeft;
+  align-self: flex-end;
+  width: 60%;
+  padding: 30px;
+}
+
+.front button {
+  align-self: flex-end;
+  margin-bottom: 30px;
+  position: absolute;
+  right: 90px;
+}
+
+.content-1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 2;
+  height: 80vh;
+}
+
+.right {
+  align-self: flex-end;
+  margin-right: 20px;
+}
+
+.about {
+  width: 60%;
+  background: var(--bg-color);
+  margin: 0 30px 0 0;
+  padding: 30px;
+  border-radius: 50px;
+  z-index: 3;
+}
+
+.content-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 60px;
+  padding-bottom: 40vh;
+  clip-path: polygon(0 0, 100% 40vh, 100% 100%, 0 calc(100% - 40vh));
+  background: var(--brand-color);
+  z-index: -1;
+}
+
+.content-2 h2 {
+  color: white;
+  padding-top: 30vh;
+  text-align: center;
+}
+
+.cards-container {
+  position: relative;
+}
+
+.arrow-left {
+  display: none;
+}
+
+.arrow-right {
+  display: none;
+}
+
+.cards {
+  display: flex;
+  padding: 5vw;
+  width: 90vw;
+  flex-wrap: wrap;
+  scroll-behavior: smooth;
+}
+
+.new-card {
+  background-image: url("/assets/placeholder.png");
+  opacity: 0;
+  height: calc(22.5vw - 20px);
+  width: calc(22.5vw - 20px);
+  background-color: var(--bg-color-light);
+  margin: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s;
+  cursor: default;
+  background-size: cover;
+  background-position: center;
+}
+
+.new-card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  transition: 0.5s;
+  background-color: var(--bg-color);
+}
+
+.new-card-inner h3 {
+  color: var(--brand-color);
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+  cursor: default;
+  margin-bottom: 10px;
+}
+
+.new-card-inner button {
+  font-size: 1.5em;
+}
+
+.new-card:hover {
+  transform: scale(1.05);
+}
+
+.new-card:hover .new-card-inner {
+  opacity: 0.9;
+  height: 40%
+}
+
+.cards-more {
+  text-align: center;
+  transform: translateY(-3vw);
+}
+
+.cards-more button {
+  opacity: 0;
+  font-size: 1.5em;
+  background: var(--highlight-color);
+
+}
+
+.content-3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.content-3 h2 {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.content-3 p {
+  padding: 0;
+  background: var(--bg-color);
+  padding: 20px;
+  border-radius: 40px;
+  text-align: right;
+}
+
+.content-3 button {
+  margin-top: 20px;
+}
+
+.location {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.map-container {
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+
+.map {
+  opacity: 0;
+  border: 8px solid var(--brand-color);
+  width: 20vw;
+  height: 20vw;
+  border-radius: 25vw;
+  overflow: hidden;
+}
+
+.map iframe {
+  width: 100%;
+  height: 40vw;
+  margin-top: -10vw;
+  border: 0;
+}
+
+.content-4 {
+  position: relative;
+}
+
+.content-4-clip {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 30vh;
+  padding-top: 20vh;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0 0, 100% 40vh, 100% 100%, 0 calc(100% - 40vh));
+  background: var(--brand-color-light);
+  position: relative;
+}
+
+.content-4 h2 {
+  padding-bottom: 50px;
+  color: var(--brand-color);
+}
+
+.open-container {
+  position: relative;
+}
+
+.hours {
+  background: var(--bg-color);
+  padding: 30px;
+  border-radius: 40px;
+  display: flex;
+  overflow: hidden;
+}
+
+.days p {
+  font-weight: 600;
+  flex-grow: 1;
+  padding-right: 50px;
+}
+
+.today {
+  background: var(--brand-color-light);
+  width: 500%;
+  margin-left: -30px;
+  padding-left: 30px;
+}
+
+.times p {
+  text-align: right;
+}
+
+.content-5 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 1;
+  align-items: center
+}
+
+.social-links {
+  border-radius: 40px;
+  padding: 20px;
+  background: var(--bg-color);
+  position: relative;
+  margin-top: 10px;
+}
+
+.social, .social-2 {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.social:hover, .social-2:hover {
+  transform: scale(1.1);
+}
+
+.social img {
+  height: 80px;
+  padding: 10px;
+}
+
+.social:hover img, .social-2:hover img {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(42%) saturate(4752%) hue-rotate(274deg) brightness(98%) contrast(128%);
+}
+
+.social p {
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.social-links-2 {
+  display: flex;
+  margin-top: 20px;
+}
+
+.social-links-2 .social-2:first-child {
+  padding-right: 50px;
+}
+
+.social-2 img {
+  height: 40px;
+  padding: 10px;
+}
+
+.social-2 p {
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.footer {
+  height: 40%;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 30vh, 100% 100%, 0 100%);
+  background: var(--brand-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.footer a {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 300;
+  text-decoration: none;
+  transition: 0.1s;
+}
+
+.footer a:hover {
+  color: var(--brand-color-light);
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5vw;
+}
+
+.footer-copyright p {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 300;
+  padding-left: 8px;
+}
+
+.footer-copyright img {
+  filter: brightness(0) saturate(100%) invert(74%) sepia(12%) saturate(1716%) hue-rotate(301deg) brightness(99%) contrast(98%);
+  height: 100px;
+}
