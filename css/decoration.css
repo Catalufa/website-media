@@ -1,0 +1,225 @@
+#aboutP1 {
+  z-index: 2;
+  width: 35vw;
+  height: 35vw;
+  position: absolute;
+  left: -5%;
+  border-radius: 50%;
+  border: 7px var(--brand-color-light) solid
+}
+
+#aboutP2 {
+  z-index: 2;
+  width: 28vw;
+  height: 28vw;
+  position: absolute;
+  border-radius: 50%;
+  left: -8%;
+  top: 150%;
+  border: 7px var(--brand-color) solid
+}
+
+#aboutP3 {
+  z-index: 1;
+  width: 38vw;
+  height: 38vw;
+  position: absolute;
+  border-radius: 50%;
+  right: -4%;
+  top: 150%;
+  border: 7px var(--brand-color) solid
+}
+
+#aboutD1 {
+  z-index: 2;
+  position: absolute;
+  padding: 5%;
+  width: 0;
+  height: 0;
+  background: var(--brand-color);
+  border-radius: 50%;
+  top: 178%;
+  left: 30%;
+}
+
+#aboutD2 {
+  z-index: 2;
+  position: absolute;
+  padding: 7.5%;
+  width: 0;
+  height: 0;
+  background: var(--brand-color-light);
+  border-radius: 50%;
+  top: 195%;
+  left: 12%;
+}
+
+#aboutD3 {
+  z-index: 2;
+  position: absolute;
+  padding: 3%;
+  width: 0;
+  height: 0;
+  background: var(--brand-color-light);
+  border-radius: 50%;
+  top: 192%;
+  left: 47%;
+}
+
+#mapD1 {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  padding: 10%;
+  width: 0;
+  height: 0;
+  background: var(--brand-color-light);
+  border-radius: 50%;
+  top: -15%;
+  left: -2%;
+}
+
+#mapD2 {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  padding: 15%;
+  width: 0;
+  height: 0;
+  background: var(--brand-color);
+  border-radius: 50%;
+  bottom: -30%;
+  left: 10vw;
+}
+
+#mapD3 {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  padding: 5%;
+  width: 0;
+  height: 0;
+  background: var(--brand-color-light);
+  border-radius: 50%;
+  bottom: -10%;
+  left: -2%;
+}
+
+#mapD4 {
+  opacity: 1;
+  z-index: -1;
+  position: absolute;
+  padding: 8%;
+  width: 0;
+  height: 0;
+  background: var(--brand-color-light);
+  border-radius: 50%;
+  top: -100%;
+  left: -5%;
+}
+
+#hoursP1 {
+  z-index: 2;
+  width: 30vw;
+  height: 30vw;
+  position: absolute;
+  left: -10%;
+  top: -6%;
+  border-radius: 50%;
+  border: 7px var(--brand-color) solid
+}
+
+#hoursP2 {
+  z-index: 2;
+  width: 30vw;
+  height: 30vw;
+  position: absolute;
+  right: -12%;
+  bottom: 5%;
+  border-radius: 50%;
+  border: 7px var(--brand-color) solid
+}
+
+#hoursD1 {
+  z-index: 1;
+  position: absolute;
+  padding: 9%;
+  width: 0;
+  height: 0;
+  background: var(--bg-color);
+  border-radius: 50%;
+  top: 25%;
+  left: -5%
+}
+
+#hoursD2 {
+  z-index: 1;
+  position: absolute;
+  padding: 8%;
+  width: 0;
+  height: 0;
+  background: var(--bg-color);
+  border-radius: 50%;
+  bottom: 32%;
+  right: 6%
+}
+
+#hoursD3 {
+  z-index: 1;
+  position: absolute;
+  padding: 10%;
+  width: 0;
+  height: 0;
+  background: var(--brand-color);
+  border-radius: 50%;
+  bottom: 5%;
+  left: -6%
+}
+
+#openD1 {
+  z-index: -1;
+  position: absolute;
+  padding: 15%;
+  width: 0;
+  height: 0;
+  background: var(--brand-color);
+  border-radius: 50%;
+  top: 55%;
+  left: -15%
+}
+
+#openD2 {
+  z-index: -1;
+  position: absolute;
+  padding: 15%;
+  width: 0;
+  height: 0;
+  background: var(--brand-color);
+  border-radius: 50%;
+  top: -10%;
+  right: -15%
+}
+
+#socialD1 {
+  z-index: -1;
+  position: absolute;
+  padding: 25%;
+  width: 0;
+  height: 0;
+  background: var(--brand-color-light);
+  border-radius: 50%;
+  top: -15%;
+  left: -25%
+}
+
+#socialD2 {
+  z-index: -1;
+  position: absolute;
+  padding: 20%;
+  width: 0;
+  height: 0;
+  background: var(--brand-color-light);
+  border-radius: 50%;
+  bottom: -10%;
+  right: -18%
+}
